@@ -18,10 +18,15 @@ def read_root():
 @app.get("/search/{product_name}")
 def search_product(product_name: str):
     ml_products = ML_SCRAPER.search_product(product_name)
-    controller.insert_list_of_dicts_into_db(ml_products)
     gs_products = GS_SCRAPER.search_product(product_name)
-    controller.insert_list_of_dicts_into_db(gs_products)
     all_results = {"MercadoLivre": ml_products, "Google Shopping": gs_products}
+    print(all_results)
+    all_products = []
+    if ml_products:
+        all_products += ml_products
+    if gs_products:
+        all_products += gs_products
+    controller.insert_list_of_dicts_into_db(all_products)
     return all_results
 
 

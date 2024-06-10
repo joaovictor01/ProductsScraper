@@ -81,7 +81,10 @@ class GoogleShoppingScraper:
             .find_all("div")[-1]
             .text.strip()
         )
-        product_id = str(item.get("data-docid"))
+        try:
+            product_id = str(item.get("data-docid"))
+        except Exception:
+            product_id = None
         result = {
             "title": title,
             "product_link": product_link,
