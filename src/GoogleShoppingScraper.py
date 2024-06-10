@@ -8,6 +8,7 @@ from loguru import logger
 
 class GoogleShoppingScraper:
     def __init__(self):
+        print("ENTROU AQUI")
         self.url = "https://shopping.google.com.br/"
         self.search_url = (
             "https://www.google.com/search?q={}&tbm=shop&sclient=products-cc"
@@ -53,6 +54,7 @@ class GoogleShoppingScraper:
             item_content.find("span").find("a").get("href")
         )
         title = item_content.find("span").find("a").find("h3").text.strip()
+        logger.info(f"Title: {title}")
         # image = (
         #     item_content.find("span")
         #     .find("a")
