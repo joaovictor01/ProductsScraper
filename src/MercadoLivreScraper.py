@@ -8,6 +8,7 @@ class MercadoLivreScraper:
     def __init__(self):
         self.url = "https://www.mercadolivre.com.br/"
         self.search_url = "https://lista.mercadolivre.com.br/"
+        pass
 
     def format_name_to_url(self, name: str) -> str:
         return name.replace(" ", "-").lower().strip()

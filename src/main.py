@@ -17,8 +17,8 @@ def read_root():
 
 @app.get("/search/{product_name}")
 def search_product(product_name: str):
-    gs_products = GS_SCRAPER.search_product(product_name, only_sales=True)
     ml_products = ML_SCRAPER.search_product(product_name)
+    gs_products = GS_SCRAPER.search_product(product_name)
     all_results = {"MercadoLivre": ml_products, "Google Shopping": gs_products}
     print(all_results)
     all_products = []
