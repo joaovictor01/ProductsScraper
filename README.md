@@ -26,7 +26,6 @@ python -m unittest discover -v -s tests/ -p '*_test.py'
 - Recupera informações como preços, avaliações e links para cada produto
 - Fornece endpoints para recuperar e excluir produtos de um banco de dados
 
-Traduzido com a versão gratuita do tradutor - DeepL.com
 
 ## Uso
 
