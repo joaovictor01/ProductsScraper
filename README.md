@@ -33,12 +33,12 @@ Para executar basta instalar o `Docker` e `Docker Compose` no seu sistema operac
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/your-username/your-project.git
+git clone https://github.com/joaovictor01/ProductsScraper
 ```
 
 2. Navegue até o diretório:
 ```bash
-cd your-project
+cd ProductsScraper
 ```
 
 
